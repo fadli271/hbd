@@ -436,6 +436,7 @@ body {
   align-items: center !important;
   height: 80vh;
   max-height: 640px;
+  z-index: 20 !important; /* Render above the hearts-canvas (z-index 15) so buttons are not covered by flowers */
 }
 
 .video-outer-header {
