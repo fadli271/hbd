@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Ulang Tahun Sayang! ❤️</title>
+  <!-- Google Fonts for premium design aesthetics -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Music Element -->
+  <audio id="bg-music" loop>
+    <source src="assets/music.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung pemutaran audio.
+  </audio>
+
+  <!-- Background Floating Hearts Canvas -->
+  <canvas id="hearts-canvas"></canvas>
+
+  <!-- Mute/Unmute Floating Button -->
+  <button id="music-toggle" class="floating-btn hidden" aria-label="Toggle Music">
+    <span class="music-icon">🎵</span>
+  </button>
+
+  <!-- 1. Intro Screen (The Envelope) -->
+  <div id="intro-screen" class="screen-overlay">
+    <div class="envelope-container">
+      <div class="envelope" id="main-envelope">
+        <div class="flap"></div>
+        <div class="pocket"></div>
+        <div class="letter">
+          <div class="letter-stub"></div>
+          <div class="letter-content">
+            <h3>Untuk Sayangku... ❤️</h3>
+            <p>Ada sebuah surat cinta dan kejutan kecil di dalamnya. Buka surat ini untuk membacanya ya...</p>
+          </div>
+        </div>
+      </div>
+      <button id="open-envelope-btn" class="btn btn-primary pulse">Buka Surat Cinta 💌</button>
+    </div>
+  </div>
+
+  <!-- Main Website Container -->
+  <main id="main-content" class="main-container hidden">
+
+    <!-- 2. Story Slides Container -->
+    <section id="story-section" class="section-card active">
+      <div class="card-content">
+        <div class="slide-indicator">1 / 4</div>
+        <h2 class="romantic-title">Surat Kecil Untukmu 📝</h2>
+        <div class="letter-paper">
+          <div class="paper-lines">
+            <div id="typewriter-text" class="romantic-text"></div>
+          </div>
+        </div>
+        <div class="action-bar">
+          <button id="next-story-btn" class="btn btn-primary" disabled>Lanjut ✨</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Full-Bleed Video Slide (Instagram Story Style) -->
+    <section id="gallery-section" class="section-card transparent-section">
+      <!-- Top Header (Outside Video Card) -->
+      <div class="video-outer-header">
+        <div class="slide-indicator">2 / 4</div>
+        <h2 class="romantic-title">Momen Indah Kita 🎥</h2>
+        <p class="subtitle">Memori manis bersama teman hidupku...</p>
+      </div>
+
+      <!-- The Video Card player -->
+      <div class="video-player-card">
+        <video id="memory-video" autoplay loop muted playsinline>
+          <source src="assets/video.mp4" type="video/mp4">
+          <source src="assets/video.mov" type="video/quicktime">
+          Browser kamu tidak mendukung pemutaran video.
+        </video>
+      </div>
+
+      <!-- Bottom Action Bar (Outside Video Card) -->
+      <div class="video-outer-footer">
+        <div class="action-bar">
+          <button id="next-gallery-btn" class="btn btn-primary pulse">Lanjut ✨</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Interactive Question Slide -->
+    <section id="question-section" class="section-card">
+      <div class="card-content">
+        <div class="slide-indicator">3 / 4</div>
+        <h2 class="romantic-title">Pertanyaan Serius... 👉👈</h2>
+        <p class="question-text">Apakah kamu menyayangi aku seperti aku menyayangimu?</p>
+        
+        <div class="decision-container" id="decision-area">
+          <button id="yes-btn" class="btn btn-love pulse">SAYANG BANGET! ❤️</button>
+          <button id="no-btn" class="btn btn-secondary">Nggak / Biasa Aja 😜</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Celebration Slide (The Cake) -->
+    <section id="celebration-section" class="section-card">
+      <div class="card-content">
+        <div class="slide-indicator">4 / 4</div>
+        <h1 class="celebration-title">Selamat Ulang Tahun Sayang! 🎉🎂</h1>
+        <p class="wishes-text">Semoga hari-harimu selalu dipenuhi kebahagiaan, tawa, dan kasih sayang. Aku selalu ada di sini untuk mendukungmu dan menemanimu di setiap langkah kehidupanmu. ❤️</p>
+        
+        <!-- Virtual Interactive Cake -->
+        <div class="cake-container">
+          <div class="cake" id="birthday-cake">
+            <div class="plate"></div>
+            <div class="layer layer-bottom"></div>
+            <div class="layer layer-middle"></div>
+            <div class="layer layer-top"></div>
+            <div class="icing"></div>
+            <div class="drips">
+              <div class="drip drip1"></div>
+              <div class="drip drip2"></div>
+              <div class="drip drip3"></div>
+            </div>
+            <div class="candle" id="cake-candle">
+              <div class="flame" id="candle-flame"></div>
+            </div>
+          </div>
+        </div>
+        
+        <p id="candle-instruction" class="candle-hint pulse">Ketuk lilin untuk meniupnya! 🕯️</p>
+        <p id="candle-blown-message" class="blown-message hidden">Yeeay! Lilin berhasil ditiup! 🎉 HBD Sayang! ❤️</p>
+        
+        <div class="action-bar final-actions">
+          <button id="replay-btn" class="btn btn-outline">Ulangi Cerita 🔄</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
