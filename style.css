@@ -432,10 +432,10 @@ body {
   padding: 0 !important;
   display: flex !important;
   flex-direction: column !important;
-  justify-content: space-between !important;
+  justify-content: center !important;
   align-items: center !important;
-  height: 80vh;
-  max-height: 640px;
+  height: auto !important;
+  max-height: 90vh;
   z-index: 20 !important; /* Render above the hearts-canvas (z-index 15) so buttons are not covered by flowers */
 }
 
@@ -461,9 +461,9 @@ body {
 }
 
 .video-player-card {
-  width: 100%;
-  flex: 1;
-  min-height: 0;
+  height: 55vh;
+  max-height: 480px;
+  aspect-ratio: 9 / 16; /* Matches portrait video 1080x1920 resolution exactly */
   position: relative;
   background: #000;
   border-radius: 28px;
@@ -718,7 +718,7 @@ body {
   }
 
   .transparent-section {
-    height: 85vh;
+    height: auto !important;
   }
 
   .video-player-card {
@@ -770,16 +770,17 @@ body {
   }
 
   .transparent-section {
-    height: 90vh;
-    max-height: none;
+    height: auto !important;
+    max-height: 95vh;
   }
 
   .video-outer-header {
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.2rem;
   }
 
   .video-player-card {
-    margin-bottom: 0.3rem;
+    height: 45vh;
+    margin-bottom: 0.2rem;
   }
 
   .decision-container {

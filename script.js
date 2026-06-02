@@ -46,7 +46,7 @@ Bulan ini saya sudah siapkan beberapa hal yang mungkin buat kau senyum-senyum la
 
 doaku untuk mu mestipun pria ini tidak terlalu beriman adalah kita tetap bersama dan selalu tau jalan untuk menurunkan ego,jangan terlalu banyak ngambek, meraju, moodian, dan yang paling penting jangan semuanya dipendam sendiri.
 
-ingat kita ini teman hidup, jadi jangan sungkan,
+ingat kita ini teman hidup, jadi jangan sungkan.
 bukan orang pertama yang ngucapin tapi orang yang paling terakhir yang akan tetap di sampingmu.
 I will always be by your side.  I Love U 💖`;
 
